@@ -199,7 +199,7 @@
 
   <section id="fases">
     <h2>O caminho em fases</h2>
-    <p class="lead">Sem datas prometidas. Cada fase tem um tamanho relativo (P, M ou G) e um critério claro de pronto. A ordem segue o que o lojista percebe primeiro.</p>
+    <p class="lead">Cada fase tem uma previsão em semanas de trabalho, um critério claro de pronto e segue a ordem do que o lojista percebe primeiro. As previsões são estimativas e dependem das decisões com o Cleomar; algumas fases andam em paralelo.</p>
     <div class="fases">
 
       <div class="cartao fase">
@@ -207,7 +207,7 @@
         <div>
           <h3>Fundação</h3>
           <p class="obj">Deixar confiável o que já existe antes de construir em cima.</p>
-          <div class="meta"><span class="tag cinza">Tamanho M</span><span class="tag ok">Começa agora</span></div>
+          <div class="meta"><span class="tag cinza">Previsão: 2 a 3 semanas</span><span class="tag ok">Em andamento</span></div>
           <ul>
             <li>Guardar a estrutura completa do banco no nosso repositório. Hoje parte das tabelas do financeiro existe só no servidor.</li>
             <li>Mover a baixa de estoque e a geração de contas para dentro do banco, em uma única operação. Assim nada fica pela metade se a conexão cair.</li>
@@ -222,18 +222,18 @@
       <div class="cartao fase destaque">
         <div class="n">1</div>
         <div>
-          <h3>Nota fiscal</h3>
-          <p class="obj">Emitir nota a partir do pedido, com os impostos calculados sozinhos, como o Bling faz.</p>
-          <div class="meta"><span class="tag cinza">Tamanho G</span><span class="tag nao">Prioridade máxima</span></div>
+          <h3>Nota fiscal, em duas rotas e quase sem custo</h3>
+          <p class="obj">Emitir nota a partir do pedido, com os impostos calculados sozinhos, como o Bling faz, sem pagar por nota.</p>
+          <div class="meta"><span class="tag nao">Prioridade máxima</span><span class="tag ok">Prévia da nota já no sistema</span></div>
           <ul>
-            <li>Emissão por um provedor especializado. Recomendamos a Focus NFe. Falar direto com a SEFAZ não é viável na hospedagem atual.</li>
+            <li><b>1A · Pelo marketplace, custo zero (previsão: 1 a 2 semanas).</b> O Mercado Livre emite a nota de graça pelo Faturador e tem API para o SSFácil mandar emitir. Nas vendas do Full da Shopee e do FBA da Amazon, importamos a nota que eles emitem.</li>
+            <li><b>1B · Emissor próprio, cerca de R$ 100 por mês (previsão: 1 a 2 semanas de piloto no RS e mais 3 a 6 semanas para várias empresas).</b> Para balcão, venda entre empresas, loja própria e nota de serviço. Bibliotecas gratuitas num servidor nosso em São Paulo; a SEFAZ e a NFS-e Nacional não cobram por nota.</li>
             <li>Natureza de operação: regras de imposto por estado, tipo de cliente e produto, com CFOP e CST preenchidos automaticamente.</li>
-            <li>Envio do certificado A1 da empresa, com teste em homologação antes de ir para produção.</li>
-            <li>NF-e a partir do pedido, cancelamento, carta de correção, inutilização, devolução, DANFE e XML por e-mail.</li>
+            <li>Certificado A1 de cada empresa guardado com criptografia, com teste em homologação antes da produção.</li>
+            <li>Cancelamento, carta de correção, inutilização, devolução, DANFE e XML por e-mail.</li>
             <li>Reforma tributária desde o início. O grupo IBS e CBS já é obrigatório para o regime normal e passa a valer para o Simples Nacional em janeiro de 2027.</li>
-            <li>Na sequência: NFC-e para balcão, NFS-e pelo padrão nacional e importação do XML de compra.</li>
           </ul>
-          <div class="pronto"><b>Pronto quando</b> uma empresa do Simples Nacional emitir uma NF-e real a partir de um pedido, com o XML guardado e enviado ao cliente.</div>
+          <div class="pronto"><b>Pronto quando</b> uma venda do Mercado Livre gerar a nota sozinha e uma empresa do Simples emitir uma NF-e real pelo emissor próprio, com XML guardado e enviado ao cliente.</div>
         </div>
       </div>
 
@@ -242,7 +242,7 @@
         <div>
           <h3>Marketplaces de verdade</h3>
           <p class="obj">Sair do "conectar conta" para operar a loja inteira pelo SSFácil.</p>
-          <div class="meta"><span class="tag cinza">Tamanho G</span><span class="tag parcial">Depende da fase 1</span></div>
+          <div class="meta"><span class="tag cinza">Previsão: 4 a 6 semanas</span><span class="tag parcial">Anda junto com a 1A</span></div>
           <ul>
             <li>Importar pedidos do Mercado Livre sem duplicar, depois Shopee e Amazon.</li>
             <li>Vincular anúncio ao produto pelo SKU ou pelo código de barras.</li>
@@ -260,7 +260,7 @@
         <div>
           <h3>Expedição e logística</h3>
           <p class="obj">Separar, conferir e despachar rápido.</p>
-          <div class="meta"><span class="tag cinza">Tamanho M</span></div>
+          <div class="meta"><span class="tag cinza">Previsão: 2 a 3 semanas</span></div>
           <ul>
             <li>Conferência por bipagem do código de barras, inclusive pela câmera do celular.</li>
             <li>Ao concluir: nota emitida, DANFE e etiqueta impressos juntos.</li>
@@ -275,7 +275,7 @@
         <div>
           <h3>Financeiro bancário</h3>
           <p class="obj">Receber e conciliar sem planilha.</p>
-          <div class="meta"><span class="tag cinza">Tamanho M a G</span></div>
+          <div class="meta"><span class="tag cinza">Previsão: 3 a 5 semanas</span></div>
           <ul>
             <li>Parcelamento na criação de contas e condição de pagamento no pedido.</li>
             <li>Importação de extrato (OFX) e conciliação.</li>
@@ -291,7 +291,7 @@
         <div>
           <h3>Diferenciais</h3>
           <p class="obj">Onde podemos passar o Bling.</p>
-          <div class="meta"><span class="tag cinza">Tamanho M</span></div>
+          <div class="meta"><span class="tag cinza">Previsão: 4 a 6 semanas</span></div>
           <ul>
             <li>Frente de caixa web com leitor e NFC-e, funcionando sem internet. O PDV do Bling não tem modo offline.</li>
             <li>Uso completo no celular. O app Android do Bling tem nota 2,3 e não existe app para iPhone.</li>
@@ -367,7 +367,7 @@
     <h2>Decisões para o Cleomar</h2>
     <p class="lead">Cinco pontos que definem o rumo. Para cada um, trazemos a nossa recomendação.</p>
     <div class="grade2">
-      <div class="cartao decisao"><b>1. Provedor de nota fiscal</b><span>Focus NFe, Webmania ou PlugNotas.</span><span class="rec">Recomendamos a Focus NFe: preço público, todos os tipos de nota e API para várias empresas.</span></div>
+      <div class="cartao decisao"><b>1. Como emitir as notas</b><span>Provedor pago por nota (Focus NFe) ou rota do marketplace mais emissor próprio.</span><span class="rec">Recomendamos marketplace mais emissor próprio: cerca de R$ 100 por mês contra R$ 2.368 da Focus com 100 empresas. Para começar, precisamos do certificado A1 de uma empresa real para o teste em homologação.</span></div>
       <div class="cartao decisao"><b>2. Público do primeiro lançamento</b><span>Simples Nacional, regime normal ou os dois.</span><span class="rec">Recomendamos começar pelo Simples Nacional, que reúne a maioria das pequenas empresas e tem regras mais simples.</span></div>
       <div class="cartao decisao"><b>3. Ordem entre nota e marketplace</b><span>Qual dor vem primeiro para os clientes da Servisoft.</span><span class="rec">Recomendamos a nota primeiro: sem nota fiscal, o marketplace não libera a etiqueta.</span></div>
       <div class="cartao decisao"><b>4. Modelo de preço do SSFácil</b><span>Por empresa, por nota ou por pedido.</span><span class="rec">Como referência, o Bling cobra por pedidos vindos de marketplace e API, com notas ilimitadas, em faixas de R$ 60 a R$ 1.250 por mês.</span></div>
@@ -377,17 +377,19 @@
 
   <section id="custos">
     <h2>Custos externos previstos</h2>
-    <p class="lead">Preços de tabela conferidos em 14 de setembro de 2026. O que não tem preço público está marcado.</p>
+    <p class="lead">Preços de tabela conferidos em 14 de setembro de 2026. A emissão de nota fica quase sem custo com a rota do marketplace mais o emissor próprio.</p>
     <div class="tabela cards custos">
       <table>
         <thead><tr><th>Item</th><th>Custo</th><th>Situação</th></tr></thead>
         <tbody>
-          <tr><td><b>Focus NFe, até 10 empresas</b><small>2 mil notas por mês</small></td><td>R$ 479 a R$ 548 por mês</td><td><span class="tag ok">Conferido</span></td></tr>
-          <tr><td><b>Focus NFe, 100 empresas</b><small>20 mil notas por mês</small></td><td>Cerca de R$ 2.368 por mês</td><td><span class="tag ok">Conferido</span></td></tr>
-          <tr><td><b>Focus NFe, acima de 50 mil notas</b></td><td>Sob consulta</td><td><span class="tag parcial">Negociar</span></td></tr>
-          <tr><td><b>Webmania, 100 empresas</b><small>Alternativa</small></td><td>Cerca de R$ 8.750 por mês</td><td><span class="tag ok">Conferido</span></td></tr>
-          <tr><td><b>NFS-e em município novo na Focus</b></td><td>R$ 199 por município</td><td><span class="tag ok">Conferido</span></td></tr>
-          <tr><td><b>Certificado digital A1</b><small>Pago por cada empresa cliente</small></td><td>Varia por certificadora</td><td><span class="tag cinza">Do cliente</span></td></tr>
+          <tr><td><b>Nota pelo Faturador do Mercado Livre</b><small>Vendas feitas no Mercado Livre</small></td><td>R$ 0</td><td><span class="tag ok">Conferido</span></td></tr>
+          <tr><td><b>Tarifa da SEFAZ e da NFS-e Nacional por nota</b></td><td>R$ 0</td><td><span class="tag ok">Conferido</span></td></tr>
+          <tr><td><b>Servidor do emissor próprio</b><small>VPS Hostinger em São Paulo</small></td><td>R$ 87,99 por mês (R$ 32,99 no 1º ano do plano anual)</td><td><span class="tag ok">Conferido</span></td></tr>
+          <tr><td><b>Total do emissor próprio, 100 empresas</b><small>Servidor, e-mail com XML e backup das notas</small></td><td>Cerca de R$ 210 a R$ 235 por mês</td><td><span class="tag ok">Estimado</span></td></tr>
+          <tr><td><b>Comparação: Focus NFe fazendo tudo, 100 empresas</b></td><td>Cerca de R$ 2.368 por mês</td><td><span class="tag ok">Conferido</span></td></tr>
+          <tr><td><b>Focus NFe só como reserva</b><small>Nota de serviço em prefeitura fora do padrão nacional</small></td><td>A partir de R$ 89,90 por mês, só se precisar</td><td><span class="tag parcial">Sob demanda</span></td></tr>
+          <tr><td><b>Certificado digital A1</b><small>Pago por cada empresa cliente, em qualquer caminho</small></td><td>R$ 203 a R$ 275 por ano</td><td><span class="tag cinza">Do cliente</span></td></tr>
+          <tr><td><b>Credenciamento de NFC-e em SC</b><small>Só se atendermos Santa Catarina</small></td><td>R$ 660,39 uma vez, mais laudo</td><td><span class="tag parcial">Pontual</span></td></tr>
           <tr><td><b>Banco de dados próprio</b></td><td>A definir na decisão 5</td><td><span class="tag parcial">Pendente</span></td></tr>
         </tbody>
       </table>
