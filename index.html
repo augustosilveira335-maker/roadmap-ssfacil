@@ -132,7 +132,7 @@
         <a class="btn secundario" href="#tester">Roteiro para o tester</a>
       </div>
       <nav class="indice" aria-label="Seções">
-        <a href="#hoje">Onde estamos</a><a href="#fases">Fases</a><a href="#paridade">Lado a lado com o Bling</a><a href="#tester">Tester</a><a href="#decisoes">Decisões</a><a href="#custos">Custos</a>
+        <a href="#hoje">Onde estamos</a><a href="#fases">Fases</a><a href="#paridade">Lado a lado com o Bling</a><a href="#tester">Tester</a><a href="#decisoes">Decisões</a><a href="#semana">Para a semana</a><a href="#custos">Custos</a>
       </nav>
       <div class="data">Atualizado em 14 de setembro de 2026</div>
     </div>
@@ -199,7 +199,7 @@
 
   <section id="fases">
     <h2>O caminho em fases</h2>
-    <p class="lead">Cada fase tem uma previsão em semanas de trabalho, um critério claro de pronto e segue a ordem do que o lojista percebe primeiro. As previsões são estimativas e dependem das decisões com o Cleomar; algumas fases andam em paralelo.</p>
+    <p class="lead"><b>Plano de 7 dias, de 15 a 21 de setembro.</b> Cada fase tem o dia de entrega do código e um critério claro de pronto. O que depende de terceiros (certificado, aprovação de plataforma, banco) está marcado e pode passar da semana.</p>
     <div class="fases">
 
       <div class="cartao fase">
@@ -207,7 +207,7 @@
         <div>
           <h3>Fundação</h3>
           <p class="obj">Deixar confiável o que já existe antes de construir em cima.</p>
-          <div class="meta"><span class="tag cinza">Previsão: 2 a 3 semanas</span><span class="tag ok">Em andamento</span></div>
+          <div class="meta"><span class="tag ok">15/09 · segunda</span><span class="tag cinza">Parte já entregue hoje</span></div>
           <ul>
             <li>Guardar a estrutura completa do banco no nosso repositório. Hoje parte das tabelas do financeiro existe só no servidor.</li>
             <li>Mover a baixa de estoque e a geração de contas para dentro do banco, em uma única operação. Assim nada fica pela metade se a conexão cair.</li>
@@ -224,10 +224,10 @@
         <div>
           <h3>Nota fiscal, em duas rotas e quase sem custo</h3>
           <p class="obj">Emitir nota a partir do pedido, com os impostos calculados sozinhos, como o Bling faz, sem pagar por nota.</p>
-          <div class="meta"><span class="tag nao">Prioridade máxima</span><span class="tag ok">Prévia da nota já no sistema</span></div>
+          <div class="meta"><span class="tag ok">16 e 17/09 · terça e quarta</span><span class="tag nao">Prioridade máxima</span><span class="tag parcial">Depende do certificado A1</span></div>
           <ul>
-            <li><b>1A · Pelo marketplace, custo zero (previsão: 1 a 2 semanas).</b> O Mercado Livre emite a nota de graça pelo Faturador e tem API para o SSFácil mandar emitir. Nas vendas do Full da Shopee e do FBA da Amazon, importamos a nota que eles emitem.</li>
-            <li><b>1B · Emissor próprio, cerca de R$ 100 por mês (previsão: 1 a 2 semanas de piloto no RS e mais 3 a 6 semanas para várias empresas).</b> Para balcão, venda entre empresas, loja própria e nota de serviço. Bibliotecas gratuitas num servidor nosso em São Paulo; a SEFAZ e a NFS-e Nacional não cobram por nota.</li>
+            <li><b>1A · Pelo marketplace, custo zero (terça, 16/09).</b> O Mercado Livre emite a nota de graça pelo Faturador e tem API para o SSFácil mandar emitir. Nas vendas do Full da Shopee e do FBA da Amazon, importamos a nota que eles emitem.</li>
+            <li><b>1B · Emissor próprio, cerca de R$ 100 por mês (terça e quarta, 16 e 17/09, começando pelo RS).</b> Para balcão, venda entre empresas, loja própria e nota de serviço. Bibliotecas gratuitas num servidor nosso em São Paulo; a SEFAZ e a NFS-e Nacional não cobram por nota.</li>
             <li>Natureza de operação: regras de imposto por estado, tipo de cliente e produto, com CFOP e CST preenchidos automaticamente.</li>
             <li>Certificado A1 de cada empresa guardado com criptografia, com teste em homologação antes da produção.</li>
             <li>Cancelamento, carta de correção, inutilização, devolução, DANFE e XML por e-mail.</li>
@@ -242,7 +242,7 @@
         <div>
           <h3>Marketplaces de verdade</h3>
           <p class="obj">Sair do "conectar conta" para operar a loja inteira pelo SSFácil.</p>
-          <div class="meta"><span class="tag cinza">Previsão: 4 a 6 semanas</span><span class="tag parcial">Anda junto com a 1A</span></div>
+          <div class="meta"><span class="tag ok">18/09 · quinta</span><span class="tag parcial">Shopee e Amazon dependem de aprovação das plataformas</span></div>
           <ul>
             <li>Importar pedidos do Mercado Livre sem duplicar, depois Shopee e Amazon.</li>
             <li>Vincular anúncio ao produto pelo SKU ou pelo código de barras.</li>
@@ -260,7 +260,7 @@
         <div>
           <h3>Expedição e logística</h3>
           <p class="obj">Separar, conferir e despachar rápido.</p>
-          <div class="meta"><span class="tag cinza">Previsão: 2 a 3 semanas</span></div>
+          <div class="meta"><span class="tag ok">19/09 · sexta</span></div>
           <ul>
             <li>Conferência por bipagem do código de barras, inclusive pela câmera do celular.</li>
             <li>Ao concluir: nota emitida, DANFE e etiqueta impressos juntos.</li>
@@ -275,7 +275,7 @@
         <div>
           <h3>Financeiro bancário</h3>
           <p class="obj">Receber e conciliar sem planilha.</p>
-          <div class="meta"><span class="tag cinza">Previsão: 3 a 5 semanas</span></div>
+          <div class="meta"><span class="tag ok">20/09 · sábado</span><span class="tag parcial">Boleto e Pix dependem de banco parceiro</span></div>
           <ul>
             <li>Parcelamento na criação de contas e condição de pagamento no pedido.</li>
             <li>Importação de extrato (OFX) e conciliação.</li>
@@ -291,7 +291,7 @@
         <div>
           <h3>Diferenciais</h3>
           <p class="obj">Onde podemos passar o Bling.</p>
-          <div class="meta"><span class="tag cinza">Previsão: 4 a 6 semanas</span></div>
+          <div class="meta"><span class="tag ok">21/09 · domingo</span><span class="tag cinza">Modo offline do PDV fica para depois</span></div>
           <ul>
             <li>Frente de caixa web com leitor e NFC-e, funcionando sem internet. O PDV do Bling não tem modo offline.</li>
             <li>Uso completo no celular. O app Android do Bling tem nota 2,3 e não existe app para iPhone.</li>
@@ -372,6 +372,27 @@
       <div class="cartao decisao"><b>3. Ordem entre nota e marketplace</b><span>Qual dor vem primeiro para os clientes da Servisoft.</span><span class="rec">Recomendamos a nota primeiro: sem nota fiscal, o marketplace não libera a etiqueta.</span></div>
       <div class="cartao decisao"><b>4. Modelo de preço do SSFácil</b><span>Por empresa, por nota ou por pedido.</span><span class="rec">Como referência, o Bling cobra por pedidos vindos de marketplace e API, com notas ilimitadas, em faixas de R$ 60 a R$ 1.250 por mês.</span></div>
       <div class="cartao decisao"><b>5. Onde fica o banco de dados</b><span>Continuar no Lovable Cloud ou migrar para um Supabase próprio.</span><span class="rec">Recomendamos migrar antes de ter clientes pagantes, para termos controle total e backup.</span></div>
+    </div>
+  </section>
+
+  <section id="semana">
+    <h2>Para cumprir a semana, precisamos de</h2>
+    <p class="lead">O código fica pronto em 7 dias. Estes itens dependem de terceiros e precisam começar na segunda, 15/09.</p>
+    <div class="grade2">
+      <div class="cartao">
+        <ul class="lista">
+          <li><b>Certificado A1 e senha de uma empresa real com inscrição estadual</b><small>De preferência no RS, com autorização por escrito para o teste em homologação. Sem ele, a emissão própria não sai do ambiente de teste.</small></li>
+          <li><b>Uma conta de vendedor no Mercado Livre com o certificado A1 no Faturador</b><small>Para testar a emissão gratuita pela API e a importação de pedidos.</small></li>
+          <li><b>Aprovação para contratar o servidor do emissor</b><small>VPS Hostinger em São Paulo, R$ 87,99 por mês, sem fidelidade.</small></li>
+        </ul>
+      </div>
+      <div class="cartao">
+        <ul class="lista">
+          <li><b>Cadastro de desenvolvedor na Shopee e na Amazon</b><small>A aprovação é das plataformas e costuma levar dias. Pedimos já, para não travar a fase 2.</small></li>
+          <li><b>Escolha do banco parceiro para boleto e Pix</b><small>A integração depende de contrato com o banco.</small></li>
+          <li><b>Contador de referência para validar as regras de imposto</b><small>CFOP, CST e NCM dos primeiros clientes precisam do aval dele.</small></li>
+        </ul>
+      </div>
     </div>
   </section>
 
