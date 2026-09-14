@@ -95,6 +95,20 @@
   .decisao span{color:var(--suave)}
   .decisao .rec{font-size:14px;color:var(--verde-escuro);font-weight:500;background:var(--verde-suave);border-radius:10px;padding:10px 12px;margin-top:4px}
   footer{border-top:1px solid var(--linha);padding:28px 0 48px;color:var(--suave);font-size:14px}
+  @media (max-width:640px){
+    .tabela.cards{border:0;background:none;overflow:visible;border-radius:0}
+    .tabela.cards table{min-width:0}
+    .tabela.cards thead{display:none}
+    .tabela.cards tr{display:block;background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:14px 16px;margin-bottom:10px}
+    .tabela.cards td{display:block;border:0;padding:3px 0}
+    .tabela.cards td:first-child{font-size:17px}
+    .tabela.cards td+td::before{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--suave);margin-top:8px}
+    .paridade td:nth-child(2)::before{content:"No Bling"}
+    .paridade td:nth-child(3)::before{content:"No SSFácil hoje"}
+    .paridade td:nth-child(4)::before{content:"Fase"}
+    .custos td:nth-child(2)::before{content:"Custo"}
+    .custos td:nth-child(3)::before{content:"Situação"}
+  }
   @media (max-width:560px){
     .fase{grid-template-columns:1fr;gap:10px}
     .fase .n{width:48px;height:48px;font-size:20px;border-radius:12px}
@@ -294,7 +308,7 @@
   <section id="paridade">
     <h2>SSFácil lado a lado com o Bling</h2>
     <p class="lead">O Bling tem mais de 3 mil artigos de ajuda. Esta tabela resume o que um pequeno lojista usa no dia a dia.</p>
-    <div class="tabela">
+    <div class="tabela cards paridade">
       <table>
         <thead><tr><th>Área</th><th>No Bling</th><th>No SSFácil hoje</th><th>Fase</th></tr></thead>
         <tbody>
@@ -364,7 +378,7 @@
   <section id="custos">
     <h2>Custos externos previstos</h2>
     <p class="lead">Preços de tabela conferidos em 14 de setembro de 2026. O que não tem preço público está marcado.</p>
-    <div class="tabela">
+    <div class="tabela cards custos">
       <table>
         <thead><tr><th>Item</th><th>Custo</th><th>Situação</th></tr></thead>
         <tbody>
